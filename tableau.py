@@ -88,7 +88,7 @@ def _sign_in(token_name, token_secret, site_name, server):
 def refresh_workbook(
     token_name, token_secret, workbook_name, workbook_id, site_name=SITE_NAME, server=SERVER
 ):
-    """Refreshes a workbook given a workbook name (or id) and authentication token."""
+    """Refreshes a workbook given a workbook id and authentication token."""
 
     auth_token, site_id = _sign_in(token_name, token_secret, site_name, server)
     error_message = f"There was a problem refreshing the workbook '{workbook_name}' with ID {workbook_id}."
