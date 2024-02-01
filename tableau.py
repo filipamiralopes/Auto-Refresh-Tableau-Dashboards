@@ -86,11 +86,10 @@ def _sign_in(token_name, token_secret, site_name, server):
 
 
 def _refresh_workbook(
-    token_name, token_secret, workbook_name, workbook_id, site_name=SITE_NAME, server=SERVER
+    workbook_name, workbook_id, auth_token, site_id, server=SERVER
 ):
     """Refreshes a workbook given a workbook id and authentication token."""
 
-    auth_token, site_id = _sign_in(token_name, token_secret, site_name, server)
     error_message = f"There was a problem refreshing the workbook '{workbook_name}' with ID {workbook_id}."
 
     # Creates empty request data
@@ -142,8 +141,8 @@ def refresh_tagged_wbs(token_name, token_secret, tag, site_name=SITE_NAME, serve
     if wbs_to_refresh:
         for wb_name, wb_id in wbs_to_refresh:
             _refresh_workbook(
-                token_name=token_name,
-                token_secret=token_secret,
                 workbook_name=wb_name,
-                workbook_id=wb_id
+                workbook_id=wb_id,
+                auth_token=auth_token,
+                site_id=site_id
             )
