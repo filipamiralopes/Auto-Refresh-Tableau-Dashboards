@@ -85,7 +85,7 @@ def _sign_in(token_name, token_secret, site_name, server):
 
 
 
-def refresh_workbook(
+def _refresh_workbook(
     token_name, token_secret, workbook_name, workbook_id, site_name=SITE_NAME, server=SERVER
 ):
     """Refreshes a workbook given a workbook id and authentication token."""
@@ -141,7 +141,7 @@ def refresh_tagged_wbs(token_name, token_secret, tag, site_name=SITE_NAME, serve
     wbs_to_refresh = _get_wbs_to_refresh(site_id, auth_token, tag)
     if wbs_to_refresh:
         for wb_name, wb_id in wbs_to_refresh:
-            refresh_workbook(
+            _refresh_workbook(
                 token_name=token_name,
                 token_secret=token_secret,
                 workbook_name=wb_name,
