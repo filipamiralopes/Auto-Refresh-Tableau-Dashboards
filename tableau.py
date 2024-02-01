@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 
-SERVER = "your-server" # e.g. https://your-server/api/3.21/sites/site-id/workbooks/workbook-id
+SERVER = "your-server" # e.g. https://<your-server>/api/3.21/sites/site-id/workbooks/workbook-id
 SITE_NAME = "octopus"
 TABLEAU_REST_API_VERSION = "3.18"
 XMLNS = {"t": "http://tableau.com/api"}
