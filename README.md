@@ -1,4 +1,4 @@
-# Automate the refresh of your Tableau Dashboards
+# [Automate the refresh of your Tableau Dashboards](https://medium.com/@flpalps/why-should-you-automate-the-refresh-of-your-tableau-dashboards-in-your-airflow-pipelines-2c203ac3ca64git)
 #### Python automation to bulk refresh tagged Tableau Dashboards via Airflow.
 Stop scheduled Extract Refreshes in Tableau and spare your database. This repository contains a set of Tableau api calls in Python with `requests` library to collect all dashboards with a specific tag and bulk refresh them in an Airflow pipeline.
 
